@@ -35,7 +35,7 @@ function CommentItem({
         </div>
         <p className="thread-item__time">{postedAt(createdAt)}</p>
       </div>
-      <div className="thread-item__body">{parse(content)}</div>
+      <div className="thread-item__body comment__body">{parse(content)}</div>
       <div className="thread-item__footer">
         <div className="thread-item__votes">
           <div className="btn__up-vote">
