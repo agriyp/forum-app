@@ -16,7 +16,7 @@ function CommentInput({ addComment, threadId }) {
       <form className="thread-input" onSubmit={addCommentHandler}>
         <textarea
           type="text"
-          placeholder="Isikan komentar ..."
+          placeholder="Isikan komentar..."
           value={content}
           onChange={handleChangeContent}
           required
