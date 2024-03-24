@@ -22,11 +22,12 @@ describe('UserItem component', async () => {
       avatar: 'https://ui-avatars.com/api/?name=Dimas Saputra&background=random',
     },
     score: 25,
+    authUser: 'user-aSDWLzINW_w5TxxYf',
   };
 
   it('should check the value of the component according to the props', async () => {
     // arrange
-    render(<UserItem user={leaderboards.user} score={leaderboards.score} />);
+    render(<UserItem {...leaderboards} />);
     const nameUser = await screen.getByText('Dimas Saputra');
     const scoreUser = await screen.getByText('25');
 

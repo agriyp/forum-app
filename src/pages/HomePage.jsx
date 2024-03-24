@@ -13,6 +13,7 @@ import {
 import CategoryThread from '../components/CategoryThread';
 import { getUniqueCategory } from '../utils';
 import { filterCategoryBy } from '../states/filterCategory/action';
+import Title from '../components/styled/Title';
 
 function HomePage() {
   const { threads = [], users = [], authUser, filterCategory } = useSelector((state) => state);
@@ -84,7 +85,7 @@ function HomePage() {
         <Link to="/threads/add" className="btn__add-thread">
           +
         </Link>
-        <h2>Diskusi Tersedia</h2>
+        <Title>Diskusi Tersedia</Title>
         <ThreadsList
           threads={threadList}
           onUpVoteThread={onUpVoteThread}

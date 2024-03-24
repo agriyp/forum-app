@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Title from './styled/Title';
 
 function CategoryThread({ uniqueCategory, onCLickCategory }) {
   return (
     <section className="category-filter">
-      <h2>Kategori populer</h2>
+      <Title>Kategori populer</Title>
       <div className="list-category">
         {uniqueCategory.map(({ id, category }) => (
           <button

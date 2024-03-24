@@ -21,6 +21,6 @@ describe('detailThread spec', () => {
     cy.get('h2')
       .contains(/^Detail Thread$/)
       .should('be.visible');
-    cy.get('.thread-item').should('be.visible');
+    cy.get('.thread-item__title').should('be.visible');
   });
 });

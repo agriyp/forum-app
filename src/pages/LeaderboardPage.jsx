@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { asyncReceiveLeaderboards } from '../states/leaderboards/action';
 import UserList from '../components/UserList';
+import Title from '../components/styled/Title';
 
 function LeaderboardPage() {
   const { leaderboards = null, authUser } = useSelector((state) => state);
@@ -17,7 +18,7 @@ function LeaderboardPage() {
 
   return (
     <section className="leaderboard-page">
-      <h2>Klasemen Pengguna Aktif</h2>
+      <Title>Klasemen Pengguna Aktif</Title>
       <UserList leaderboards={leaderboards} authUser={authUser.id} />
     </section>
   );

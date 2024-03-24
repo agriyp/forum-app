@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CommentItem, { commentShape } from './CommentItem';
+import Title from './styled/Title';
 
 function CommentList({ comments, onUpVoteComment, onDownVoteComment, authUser }) {
   return (
     <div className="threads-list threads-list__comment">
-      <h2>{`Komentar (${comments.length})`}</h2>
+      <Title>{`Komentar (${comments.length})`}</Title>
       {comments.map((comment) => (
         <CommentItem
           key={comment.id}

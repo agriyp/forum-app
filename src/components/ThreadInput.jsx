@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { asyncAddThread } from '../states/threads/action';
 import useInput from '../hooks/useInput';
+import Title from './styled/Title';
 
 function ThreadInput() {
   const [body, handleChangeBody] = useInput('');
@@ -27,7 +28,7 @@ function ThreadInput() {
 
   return (
     <section className="thread-input-container">
-      <h2>Tambah Thread</h2>
+      <Title>Tambah Thread</Title>
       <form className="thread-input" onSubmit={addThreadHandler}>
         <input
           type="text"

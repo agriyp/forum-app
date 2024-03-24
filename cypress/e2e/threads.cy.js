@@ -24,6 +24,6 @@ describe('Threads spec', () => {
   });
 
   it('should display all thread item', () => {
-    cy.get('.thread-item').should('be.visible');
+    cy.get('.thread-item__title').should('be.visible');
   });
 });
