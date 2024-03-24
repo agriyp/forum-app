@@ -11,6 +11,7 @@ import { asyncUnsetAuthUser } from './states/authUser/action';
 import ThreadInput from './components/ThreadInput';
 import DetailPage from './pages/DetailPage';
 import LeaderboardPage from './pages/LeaderboardPage';
+import Container from './components/styled/Container';
 
 function App() {
   const { authUser = null, isPreload = false } = useSelector((state) => state);
@@ -33,14 +34,14 @@ function App() {
     return (
       <>
         <Loading />
-        <div className="app-container">
+        <Container>
           <main className="auth-page">
             <Routes>
               <Route path="/*" element={<LoginPage />} />
               <Route path="/register" element={<RegisterPage />} />
             </Routes>
           </main>
-        </div>
+        </Container>
       </>
     );
   }
@@ -48,7 +49,7 @@ function App() {
   return (
     <>
       <Loading />
-      <div className="app-container app-container__dashboard">
+      <Container backgroundColor="#35374b">
         <header>
           <Navigation authUser={authUser} signOut={onSignOut} />
         </header>
@@ -61,7 +62,7 @@ function App() {
             <Route path="/leaderboard" element={<LeaderboardPage />} />
           </Routes>
         </main>
-      </div>
+      </Container>
     </>
   );
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi';
 import parse from 'html-react-parser';
 import { postedAt } from '../utils';
+import CardThread from './styled/CardThread';
 
 function ThreadDetailItem({
   id,
@@ -28,7 +29,7 @@ function ThreadDetailItem({
   };
 
   return (
-    <div className="thread-item">
+    <CardThread>
       <div className="thread-item__header">
         <div className="user-info">
           <img src={owner.avatar} alt="" />
@@ -55,7 +56,7 @@ function ThreadDetailItem({
           </div>
         </div>
       </div>
-    </div>
+    </CardThread>
   );
 }
 

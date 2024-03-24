@@ -4,6 +4,7 @@ import { BiLike, BiDislike, BiSolidDislike, BiSolidLike } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 import { postedAt } from '../utils';
+import CardThread from './styled/CardThread';
 
 function ThreadItem({
   user,
@@ -30,7 +31,7 @@ function ThreadItem({
   };
 
   return (
-    <div className="thread-item">
+    <CardThread>
       <div className="thread-item__header">
         <div className="user-info">
           <img src={user.avatar} alt="" />
@@ -62,7 +63,7 @@ function ThreadItem({
           {totalComments > 0 ? `${totalComments} Komentar` : 'Tidak Ada Komentar'}
         </Link>
       </div>
-    </div>
+    </CardThread>
   );
 }
 

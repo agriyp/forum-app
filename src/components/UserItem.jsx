@@ -1,15 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CardUser from './styled/CardUser';
 
 function UserItem({ user, score, authUser }) {
   return (
-    <div className="user-item">
+    <CardUser>
       <div className="user-info">
         <img src={user.avatar} alt="" />
         <p className="">{user.id === authUser ? `${user.name} (Anda)` : user.name}</p>
       </div>
       <p className="user-item__score">{score}</p>
-    </div>
+    </CardUser>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useInput from '../hooks/useInput';
+import Title from './styled/Title';
 
 function CommentInput({ addComment, threadId }) {
   const [content, handleChangeContent] = useInput('');
@@ -12,7 +13,7 @@ function CommentInput({ addComment, threadId }) {
 
   return (
     <section className="thread-input-container">
-      <h2>Beri Komentar</h2>
+      <Title>Beri Komentar</Title>
       <form className="thread-input" onSubmit={addCommentHandler}>
         <textarea
           type="text"

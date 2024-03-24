@@ -16,31 +16,11 @@ body {
   color: var(--color-5);
 }
 main {
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
-}
-.home-page > h2,
-.detail-page > h2,
-.leaderboard-page > h2,
-.category-filter > h2 {
-  margin-bottom: 1rem;
-}
-.app-container {
-  width: 100%;
-  max-width: 720px;
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-  align-items: center;
-  margin: 0 auto;
-  position: relative;
-  padding: 1rem 1.3rem;
-}
-.app-container__dashboard {
-  background-color: var(--color-1);
 }
 .auth-page,
 .register-page {
@@ -148,15 +128,7 @@ header {
 .threads-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-.thread-item {
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
-  padding: 0 0 2rem;
-  border-bottom: 3px solid var(--color-3);
-  position: relative;
 }
 .thread-item__header {
   display: flex;
@@ -232,12 +204,6 @@ header {
 .thread-input textarea {
   max-width: 100%;
 }
-.thread-input-container > h2 {
-  margin: 1rem 0;
-}
-.threads-list__comment > h2 {
-  margin-top: 2rem;
-}
 .detail-page .thread-item__body {
   display: block;
 }
@@ -259,13 +225,6 @@ header {
 .user-list__header {
   display: flex;
   justify-content: space-between;
-}
-.user-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 3px solid var(--color-3);
-  align-items: center;
 }
 .list-category {
   display: flex;
@@ -320,8 +279,5 @@ nav a:hover {
   }
   .btn__logout span {
     display: none;
-  }
-  .app-container {
-    padding: 1rem;
   }
 }

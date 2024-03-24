@@ -18,6 +18,7 @@ import {
 import CommentInput from '../components/CommentInput';
 import CommentList from '../components/CommentList';
 import { asyncNeutralVoteThread } from '../states/threads/action';
+import Title from '../components/styled/Title';
 
 function DetailPage() {
   const { id } = useParams();
@@ -88,7 +89,7 @@ function DetailPage() {
 
   return (
     <section className="detail-page">
-      <h2>Detail Thread</h2>
+      <Title>Detail Thread</Title>
       <ThreadDetailItem
         {...threadDetail}
         authUser={authUser.id}
